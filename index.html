@@ -1,302 +1,96 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>KlarSicht Digital – Agentur für Sichtbarkeit</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
-<style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      background-image: url('https://images.unsplash.com/photo-1612832020927-18104f396b4a?auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      backdrop-filter: brightness(0.95);
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      color: #003C4D;
-
-      color: #003C4D;
-    }
-    header {
-      background: linear-gradient(to right, #005377, #3C7A57);
-      padding: 4rem 2rem;
-      color: white;
-      text-align: center;
-      position: relative;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    header img {
-      max-width: 400px;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3rem;
-      margin: 0 0 1rem 0;
-    }
-    header p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      background: #003C4D;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-    nav a:hover {
-      color: #FFC857;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      animation: fadeIn 1s ease-in;
-    }
-    h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2rem;
-      color: #005377;
-      margin-bottom: 1rem;
-    }
-    .cta {
-      display: inline-block;
-      background: #FFC857;
-      color: #003C4D;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: bold;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: background 0.3s;
-    }
-    .cta:hover {
-      background: #e5b946;
-    }
-    ul, ol {
-      padding-left: 1.5rem;
-    }
-    .pakete {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .paket {
-      background: white;
-      border: 2px solid #005377;
-      border-radius: 10px;
-      padding: 2rem;
-      flex: 1 1 30%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .paket:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-    .paket h3 {
-      margin-top: 0;
-      font-family: 'Montserrat', sans-serif;
-      color: #3C7A57;
-    }
-    footer {
-      background: #003C4D;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-  
-.hero-overlay {
-  position: relative;
-  overflow: hidden;
-}
-.hero-overlay::before {
-  content: "";
-  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-header * {
-  position: relative;
-  z-index: 2;
-}
-
-.cta {
-  transform: scale(1);
-}
-.cta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.section-animated {
-  opacity: 0;
-  animation: slideUp 1s ease-out forwards;
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KlarSicht Digital – Agentur für Sichtbarkeit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<video autoplay="" id="bgvideo" loop="" muted="" style="position:fixed; right:0; bottom:0; min-width:100%; min-height:100%; z-index:-1; object-fit:cover;">
-<source src="https://assets.mixkit.co/videos/preview/mixkit-city-skyline-reflected-in-water-1398-large.mp4" type="video/mp4"/>
-</video>
+  <header class="hero">
+    <video autoplay muted loop class="background-video">
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="logo.png" alt="KlarSicht Digital Logo" />
+      <h1>Deine Agentur für digitale Sichtbarkeit</h1>
+      <p>Webdesign, Social Media & KI aus Flensburg – persönlich. lokal. genial.</p>
+      <a class="cta" href="#kontakt">🚀 Jetzt durchstarten</a>
+    </div>
+  </header>
 
-<header class="hero-overlay">
-<img alt="KlarSicht Digital Logo" src="logo.png"/>
-<h1>KlarSicht Digital</h1>
-<p>Deine Agentur für digitale Sichtbarkeit, Marketing &amp; KI-Power aus Flensburg</p>
-<a class="cta" href="#kontakt">🚀 Kostenloses Erstgespräch sichern</a>
-</header>
-<nav>
-<a href="#leistungen">Leistungen</a>
-<a href="#pakete">Pakete</a>
-<a href="#prozess">Ablauf</a>
-<a href="#ueberuns">Wir</a>
-<a href="#kontakt">Kontakt</a>
-</nav>
-<section class="section-animated" id="leistungen">
-<h2>Unsere Power-Leistungen</h2>
-<ul>
-<li>🔧 Webdesign &amp; Development: High-Speed, mobiloptimiert &amp; SEO-ready</li>
-<li>🎨 Branding &amp; Design: Logo, Print, Identity – alles aus einer Hand</li>
-<li>📈 Marketing &amp; Social Media: Kreative Strategien + datenbasierte Tools</li>
-<li>🤖 KI-gestützte Optimierung: Automatisierung, Texte, Prozesse</li>
-</ul>
-<a class="cta" href="#kontakt">👉 Jetzt Projekt starten</a>
-</section>
-<section class="section-animated" id="pakete">
-<h2>Unsere Pakete</h2>
-<div class="pakete">
-<div class="paket">
-<h3>🚀 Starter</h3>
-<p>Perfekt für den ersten Online-Auftritt.</p>
-<ul>
-<li>1-seitige Website</li>
-<li>Google Business Eintrag</li>
-<li>Basis-SEO</li>
-</ul>
-<strong>490 € einmalig</strong>
-</div>
-<div class="paket">
-<h3>🔥 Komfort</h3>
-<p>Mehr Sichtbarkeit &amp; Präsenz.</p>
-<ul>
-<li>Mehrseitige Website</li>
-<li>Logo + Corporate Design</li>
-<li>Social Media Einrichtung</li>
-</ul>
-<strong>1.490 € einmalig</strong>
-</div>
-<div class="paket">
-<h3>💼 Premium</h3>
-<p>Digitale Rundumbetreuung mit KI.</p>
-<ul>
-<li>Komplettpaket inkl. Komfort</li>
-<li>KI-gestützte Prozessautomatisierung</li>
-<li>Monatliche Betreuung</li>
-</ul>
-<strong>2.490 € + 99 €/Monat</strong>
-</div>
-<div class="paket">
-<h3>📱 Social Media Pro</h3>
-<p>Permanente Betreuung &amp; Content-Erstellung.</p>
-<ul>
-<li>Social Media Strategie</li>
-<li>Post-Design &amp; Texte durch KI</li>
-<li>Redaktionsplanung, Analyse &amp; Support</li>
-</ul>
-<strong>399 € / Monat</strong>
-</div>
-</div>
-</section>
-<section class="section-animated" id="prozess">
-<h2>Wie wir dich sichtbar machen</h2>
-<ol>
-<li>🕵️ Analyse: Was brauchst du? Was funktioniert bei dir?</li>
-<li>🧠 Konzept: Design + Tools = Erfolgsstrategie</li>
-<li>🚀 Umsetzung: Mit Tempo, Technik &amp; viel Stil</li>
-<li>📊 Optimierung: Langfristig messbare Ergebnisse</li>
-</ol>
-</section>
-<section class="section-animated" id="ueberuns">
-<h2>Wer wir sind</h2>
-<p>Ich bin Andre, 29 Jahre alt – ein kreativer Typ mit starkem Technikbezug. In den letzten Jahren habe ich mich intensiv mit künstlicher Intelligenz, Webdesign und Programmierung über HTML, CSS &amp; Co. beschäftigt. 
-    Es ist traurig zu sehen, wie viele kleine Unternehmen in Flensburg noch nicht einmal eine eigene Homepage haben oder auf Google kaum auffindbar sind. 
-    Genau diese Basics möchte ich den lokalen Betrieben beibringen – nicht nur einmalig, sondern als dauerhafte Unterstützung und Partner an ihrer Seite.</p>
-</section>
-<section class="section-animated" id="kontakt">
-<h2>Kontaktiere uns</h2>
-<p>📍 Vor Ort in Flensburg oder remote deutschlandweit</p>
-<p>📧 kontakt@klarsicht-digital.de</p>
-<p>📞 0152 2100 7682</p>
-<p>🤝 Das Erstgespräch findet kostenlos und direkt bei Ihnen im Betrieb statt – regional, persönlich, auf Augenhöhe.</p>
-<a class="cta" href="#terminform">🗓️ Termin online buchen</a>
-</section>
-<footer>
-<p>© 2025 KlarSicht Digital – Made with ❤️ in Flensburg</p>
-</footer>
-<section class="section-animated" id="terminform">
-<h2>Online-Terminvereinbarung</h2>
-<form id="kontaktFormular">
-<label for="firma">Unternehmensname*</label><br/>
-<input id="firma" name="firma" required="" type="text"/><br/><br/>
-<label for="adresse">Adresse*</label><br/>
-<input id="adresse" name="adresse" required="" type="text"/><br/><br/>
-<label for="email">E-Mail*</label><br/>
-<input id="email" name="email" required="" type="email"/><br/><br/>
-<label for="probleme">Probleme / Herausforderungen</label><br/>
-<textarea id="probleme" name="probleme"></textarea><br/><br/>
-<label for="wuensche">Wünsche / Ziele</label><br/>
-<textarea id="wuensche" name="wuensche"></textarea><br/><br/>
-<button class="cta" type="submit">Absenden</button>
-</form>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-      (function(){
-        emailjs.init("YOUR_PUBLIC_KEY_HERE"); // ← Ersetze mit deinem EmailJS Public Key
-      })();
+  <section id="leistungen">
+    <h2>Unsere Power-Leistungen</h2>
+    <ul>
+      <li>🔧 Webdesign & Development</li>
+      <li>🎨 Branding & Design</li>
+      <li>📈 Social Media Marketing</li>
+      <li>🤖 KI-gestützte Automatisierung</li>
+    </ul>
+  </section>
 
-      document.getElementById("kontaktFormular").addEventListener("submit", function(event) {
-        event.preventDefault();
+  <section id="pakete">
+    <h2>Unsere Pakete</h2>
+    <div class="pakete">
+      <div class="paket">
+        <h3>🚀 Starter</h3>
+        <p>1-seitige Website, Google Business, Basis-SEO</p>
+        <strong>411 € netto</strong>
+      </div>
+      <div class="paket">
+        <h3>🔥 Komfort</h3>
+        <p>Mehrseitige Website, Logo, Social Media Einrichtung</p>
+        <strong>1.252 € netto</strong>
+      </div>
+      <div class="paket">
+        <h3>💼 Premium</h3>
+        <p>Komplettlösung inkl. KI & Betreuung</p>
+        <strong>2.092 € netto + 83 €/Monat</strong>
+      </div>
+      <div class="paket">
+        <h3>📱 Social Media Pro</h3>
+        <p>Content-Erstellung & Betreuung</p>
+        <strong>335 €/Monat netto</strong>
+      </div>
+    </div>
+  </section>
 
-        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-          firma: document.getElementById("firma").value,
-          adresse: document.getElementById("adresse").value,
-          email: document.getElementById("email").value,
-          probleme: document.getElementById("probleme").value,
-          wuensche: document.getElementById("wuensche").value
-        }).then(function(response) {
-          alert("Vielen Dank! Wir melden uns zeitnah.");
-        }, function(error) {
-          alert("Fehler beim Senden. Bitte versuchen Sie es später erneut.");
-        });
-      });
-    </script>
-</section>
+  <section id="testimonials">
+    <h2>Kundenmeinungen</h2>
+    <div class="testimonial">
+      <p>„Unsere Website sieht endlich professionell aus – André hat alles erklärt und umgesetzt wie ein Profi!“</p>
+      <strong>– Sarah W., Friseursalon Flensburg</strong>
+    </div>
+    <div class="testimonial">
+      <p>„Die KI-Lösungen sparen uns jede Woche Stunden an Arbeit. Absolut empfehlenswert.“</p>
+      <strong>– Jan M., Onlinehändler</strong>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Häufige Fragen</h2>
+    <h3>Wie schnell bekomme ich meine Website?</h3>
+    <p>In 7–14 Werktagen – je nach Paket.</p>
+    <h3>Was ist, wenn ich keine Ahnung von Technik habe?</h3>
+    <p>Kein Problem – ich erkläre dir alles Schritt für Schritt.</p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>📧 kontakt@klarsicht-digital.de | 📞 0152 2100 7682</p>
+    <form>
+      <input type="text" placeholder="Name*" required>
+      <input type="email" placeholder="E-Mail*" required>
+      <textarea rows="5" placeholder="Nachricht*" required></textarea>
+      <button class="cta" type="submit">Absenden</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 KlarSicht Digital – Made with ❤️ in Flensburg</p>
+  </footer>
 </body>
 </html>
